@@ -13,9 +13,12 @@ body {
   align-items: center;
   overflow: hidden;
   color: white;
+  text-align: center;
 }
 
 .container {
+  width: 90%;
+  max-width: 600px;
   text-align: center;
 }
 
@@ -27,7 +30,7 @@ body {
 }
 
 #headline {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   animation: glow 1.5s infinite alternate, changeColor 5s infinite alternate;
 }
@@ -56,7 +59,7 @@ body {
 button {
   margin-top: 20px;
   padding: 15px 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: #ff6f91;
   color: white;
   border: none;
@@ -83,7 +86,7 @@ button:hover {
   line-height: 1.8;
   opacity: 0;
   animation: typing 3s steps(30) 1s forwards, fadeIn 2s ease forwards;
-  max-width: 80%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -111,4 +114,21 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+/* Media Query for smaller screen sizes (Mobile) */
+@media only screen and (max-width: 480px) {
+  #headline {
+    font-size: 2rem;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  button {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
 }
