@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #36b0c9, #a1ffce);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+}
+
+.container {
+  text-align: center;
+}
+
+.surprise-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#headline {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: glow 1.5s infinite alternate, changeColor 5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  }
+  to {
+    text-shadow: 0 0 20px #ff6f91, 0 0 30px #ff6f91;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: #ff6f91;
+  }
+  50% {
+    color: #f0f0f0;
+  }
+  100% {
+    color: #36b0c9;
+  }
+}
+
+button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.5s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #36b0c9;
+}
+
+.message-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.message {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  opacity: 0;
+  animation: typing 3s steps(30) 1s forwards, fadeIn 2s ease forwards;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
